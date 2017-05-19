@@ -72,6 +72,7 @@ function getCookie(varNavn) {
 		
 //im a friend of oggyfarlig im not stealing his work
 var wait2 = 1;
+var end = false;
 var postext = 110;
 var postext2 = 200;
 var seconds = [];
@@ -83,7 +84,7 @@ text("WARNING! Contains flashing images", postext, postext2);
 draw = function() {
     var seconds = Math.round(millis() / 1000);
 
-if (seconds >= 10) {
+if (seconds >= 10 && end === false) {
 
 var postext = 10000;
 var postext2 = 10000;
@@ -148,7 +149,8 @@ draw = function() {
         pres3 = pres + 1;
         agarSize = 10 * pres3;
     }
-    
+    if (pres >= 1000) {
+        end = true
 };
 
 }
@@ -163,6 +165,11 @@ draw = function() {
     var canvas = document.getElementById("mycanvas"); 
     // Pass the function sketchProc (defined in myCode.js) to Processing's constructor
     var processingInstance = new Processing(canvas, sketchProc); 
+
+if (end === true) {
+    text("GG! You won!", 100, 200)
+}
+
  </script>
 
 </html>
