@@ -151,6 +151,10 @@ draw = function() {
     }
     if (pres >= 1000) {
         end = true
+    }
+    if (end === true) {
+    text("GG! You won!", 100, 200)
+    }
 };
 
 }
@@ -165,10 +169,6 @@ draw = function() {
     var canvas = document.getElementById("mycanvas"); 
     // Pass the function sketchProc (defined in myCode.js) to Processing's constructor
     var processingInstance = new Processing(canvas, sketchProc); 
-
-if (end === true) {
-    text("GG! You won!", 100, 200)
-}
 
  </script>
 
