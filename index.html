@@ -9,5 +9,91 @@
     <p align="center">
       <canvas id="mycanvas" tabindex="0" with="500" height="500" style="image-rendering: -webkit-optimize-contrast !important;">
     </p>
+    <script>
+      //im a friend of oggyfarlig im not stealing his work
+var wait2 = 1;
+var postext = 110;
+var postext2 = 200;
+var seconds = [];
+background(255, 0, 0);
+fill(255, 255, 255);
+textSize(12);
+text("WARNING! Contains flashing images", postext, postext2);
+
+draw = function() {
+    var seconds = Math.round(millis() / 1000);
+
+if (seconds >= 10) {
+
+var postext = 10000;
+var postext2 = 10000;
+
+var pres = 0;
+var xpos = 200;
+var ypos = 200;
+var agarSize = 10;
+var pres3 = pres + 1;
+
+var foodxpos = 50;
+var foodypos = 50;
+var foodSize = 10;
+
+draw = function() {
+
+    var a = foodxpos - mouseX;
+    var b = foodypos - mouseY;
+
+    var c = Math.sqrt( a*a + b*b );
+
+
+    if (c < agarSize /2 + foodSize /2 ){
+        agarSize = agarSize + 1 * pres3;
+        foodxpos = random (10, 390);
+        foodypos = random (10, 390);
+    }
+
+    background (219, 219, 219);
+
+    fill(random(1, 255), random(1, 255), random(1, 255));
+    ellipse (mouseX, mouseY, agarSize, agarSize);
+    var mass = function() {
+        var textMass = "Mass: " + agarSize;
+        var pres2 = "Prestige: " + pres;
+        
+        fill (0, 0, 0);
+        textSize(20);
+        text (textMass, 0, 390);
+        text (pres2, 0, 370);
+    
+    fill(random(1, 255), random(1, 255), random(1, 255));
+
+    // (random(1, 255), random(1, 255), random(1, 255))
+
+    ellipse (foodxpos, foodypos, foodSize, foodSize);
+
+
+    var oggy = function() {
+        
+        fill (0, 0, 0);
+        textSize(20);
+        text ("By Oggyfarlig", 10, 20);
+        
+        };
+        oggy();
+    };
+    mass();
+
+    if (agarSize >= 1000) {
+        pres += 1;
+        pres3 = pres + 1;
+        agarSize = 10 * pres3;
+    }
+    
+};
+
+}
+
+};
+    </script>
   </body>
 </html>
